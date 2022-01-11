@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import User from "./components/User";
 import FollowerList from "./components/FollowerList";
+import "./index.css";
 class App extends React.Component {
   state = {
     user: [],
@@ -19,7 +20,7 @@ class App extends React.Component {
   }
 
   handleChange = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     this.setState({
       ...this.state,
       userName: e.target.value,
@@ -40,13 +41,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <div>Github Card</div>
+      <div className="container">
+        <h1>Github Info</h1>
         <form>
           <input value={this.state.userName} onChange={this.handleChange} />
           <button onClick={this.handleSearch}>Fetch User</button>
         </form>
         <User data={this.state.user} />
+        <h2>Followers:</h2>
+
         <FollowerList />
       </div>
     );

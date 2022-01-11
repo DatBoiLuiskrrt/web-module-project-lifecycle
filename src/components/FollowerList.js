@@ -21,7 +21,7 @@ class FollowerList extends Component {
 
   render() {
     return (
-      <div>
+      <div className="follower-container">
         {this.state.followers.map((user) => {
           return <Followers key={user.login} data={user} />;
         })}

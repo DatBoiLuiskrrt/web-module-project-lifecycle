@@ -5,9 +5,11 @@ class Followers extends Component {
     const { data } = this.props;
     // console.log(this.props.data);
     return (
-      <div>
-        <img src={data.avatar_url} />
-        <p>{data.login}</p>
+      <div className="follower-container">
+        <div className="follower">
+          <img src={data.avatar_url} />
+          <p>{data.login}</p>
+        </div>
       </div>
     );
   }

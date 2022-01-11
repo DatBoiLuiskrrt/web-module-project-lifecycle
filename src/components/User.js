@@ -4,7 +4,7 @@ class User extends React.Component {
   render() {
     const { data } = this.props;
     return (
-      <div>
+      <div className="user">
         <img src={data.avatar_url} />
         <h1>{data.name}</h1>
         <p>{data.login}</p>
